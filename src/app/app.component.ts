@@ -11,12 +11,6 @@ import { HeroService } from './hero.service'
 })
 export class AppComponent {
   title: string;
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm',
-    type: Prime.STRENGTH,
-    status: Status.Radiant
-  };
   message: string;
   prime: Prime;
   selectedHero: Hero;
@@ -28,5 +22,6 @@ export class AppComponent {
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
     this.message = "Hello " + hero.name;
+    console.log(hero);
   }
 }
